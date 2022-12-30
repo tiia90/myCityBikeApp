@@ -29,14 +29,23 @@ app.get("/", (req, res) => {
 })
 })
 
+const routesSchema = {
+    nimi: String
+}
+const Route = mongoose.model('Route', routesSchema);
+
 app.get("/getroutes", (req, res) => {
-    res.render("routes")
+    Route.find({}, function (err, routes) {
+        res.render('bikeroutes', {
+            routesList: routes
+        })
+    })
 
 });
 
 app.post("/getroutes", (req, res) => {
-    
-    console.log(req.body.Nimi)
+    res.render("routes")
+    console.log(req.body.ID)
 });
 
 
