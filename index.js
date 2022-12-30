@@ -16,6 +16,7 @@ mongoose.connect('mongodb+srv://tiia90:3heivaan4@cluster0.igutn.mongodb.net/bike
 
 
 const stationsSchema = {
+    ID: Number, 
     Nimi: String
 }
 const Station = mongoose.model('Station', stationsSchema);
