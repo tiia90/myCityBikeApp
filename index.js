@@ -35,17 +35,26 @@ const routesSchema = {
 const Route = mongoose.model('Route', routesSchema);
 
 app.get("/getroutes", (req, res) => {
+    res.render('bikeroutess')
+   
+   
+   
+   
+   
+
+});
+
+app.post("/getroutes", (req, res) => {
     Route.find({}, function (err, routes) {
         res.render('bikeroutes', {
             routesList: routes
         })
     })
 
-});
-
-app.post("/getroutes", (req, res) => {
-    res.render("routes")
-    console.log(req.body.ID)
+   //ata = {
+        //nimi: req.body.nimi
+    //};
+   //data.search(req, res, data);
 });
 
 
