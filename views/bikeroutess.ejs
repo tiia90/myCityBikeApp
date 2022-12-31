@@ -11,26 +11,11 @@
 <button><a href="/">Back to station view!</a></button>
 
        <form action="/getroutes" method="POST">
+        <label for="name">Write your Departure station name here:</label>
             <input type="text" name="ID" required id="">
             <input type="submit" value="Get Routes">
         </form>
 
-
-        
-        <%routesList.find(route => {%>
-            <tr>
-                
-              
-                <td><%= route.nimi %></td>
-                <td><%= route.osoite %></td>
-               
-            </tr>
-      
-        <%})%>
-       
-       
-       
-                   
 
            
            
