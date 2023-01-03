@@ -4,9 +4,10 @@ const Route = require('./models/bikeroute');
 const Station = require('./models/bikestation');
 
 router.get("/", (req, res) => {
-    Station.find({}, function(err, stations) {
+    Station.find({}, function(err, stations, stationst) {
     res.render('index', {
-        stationsList: stations
+        stationsList: stations,
+        stationstList: stationst
     })
 })
 })
@@ -19,9 +20,9 @@ router.get("/getroutes/", (req, res) => {
 router.post("/getroutes", async (req, res) => {
     Route.find({}, function(err, routes) {
         res.render('bikeroutes', {
-            
             routesList: routes
         })
     })
-    })
+})
+
 module.exports = router;
