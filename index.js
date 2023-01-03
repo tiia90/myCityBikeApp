@@ -7,7 +7,6 @@ const port = 3000;
 const routes = require("./router")
 const Route = require('./models/bikeroute');
 const Station = require('./models/bikestation');
-const Stationt = require('./models/uusi');
 
 app.use('/', routes);
 app.use(bodyParser.urlencoded ({ extended : true }));

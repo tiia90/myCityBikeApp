@@ -4,11 +4,15 @@ const Route = require('./models/bikeroute');
 const Station = require('./models/bikestation');
 
 router.get("/", (req, res) => {
-    Station.find({}, function(err, stations, stationst) {
+    Station.find({}, function(err, stations) {
     res.render('index', {
-        stationsList: stations,
-        stationstList: stationst
+        stationsList: stations
     })
+
+    //trying to get pop up function
+    Station.findOne({}, function(err, stations) {
+        
+     })
 })
 })
 
