@@ -13,16 +13,16 @@ You can also freely choose the frontend (and possibly mobile frontend) technolog
 above, you can see a small excerpt from the task, if you want to view more detailed instructions, see the link:
 https://github.com/solita/dev-academy-2023-exercise#the-exercise
 
-#Pleace note that
+# Pleace note that
 
 -My database has space limit, so i cannot add all information- (example not going to add bike routes less than 100m)
 -This moment my database does not include bike routes, because it is easier to test code with smaller database.
 
-#I used:
+# I used:
 
 Nodejs, MongoDB, ejs, 
 
-#Todo:
+# Todo:
 
 -I´m working with popup windows to show details about stations
 -I'm working with searc box to searc bike routes
